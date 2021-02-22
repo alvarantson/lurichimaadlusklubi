@@ -1,0 +1,85 @@
+.hinnakiri {
+	margin-top: 15vh;
+	padding-bottom: 3vh;
+	background-color: white;
+	border-radius: 25px;
+	min-height: 75vh;
+}
+.hinnakiri h3,
+.hinnakiri h1 {
+	margin-top: 1.25em;
+	margin-bottom: 1em;
+	opacity: .8;
+	font-size: 1.8em;
+	font-weight: 700;
+	text-align: center;
+	color: var(--kontrast);
+}
+.hinnakiri p {
+	font-weight: 350;
+	font-size: .9em;
+	text-align: center;
+	padding-left: 7.5%;
+	padding-right: 7.5%;
+}
+.hinnakiri img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-height: 35vh;
+	text-align: center;
+}
+
+
+/* BLOG */
+a.back {
+	text-decoration: none;
+	color: white;
+	padding: 1em 2em 1em 2em;
+	margin-top: 2em;
+	margin-left: -1em;
+	border-radius: 25px;
+	background-color: var(--kontrast);
+	transition: all .5s;
+	font-size: .8em;
+	border: solid .15em var(--kontrast);
+}
+a.back:hover {
+	background-color: var(--kontrast-25);
+	color: var(--kontrast);
+}
+.post {
+	height: 18em;
+	margin-bottom: 2em;
+	background-size: cover;
+	filter: saturate(75%);
+	transition: all .5s;
+	cursor: pointer;
+}
+.post:hover {
+	filter: saturate(0%);
+}
+.blog a {
+	text-decoration: none;
+}
+.post h2{
+	text-align: left;
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px rgba(0,0,0,.6);
+	font-size: 1.4em;
+	font-weight: 600;
+}
+.post h4{
+	text-align: right;
+	text-align: center;
+	color: white;
+	opacity: .5;
+	font-weight: 700;
+}
+.date {
+	text-align: center;
+	font-weight: 700;
+	color: gray;
+	opacity: .5;
+}

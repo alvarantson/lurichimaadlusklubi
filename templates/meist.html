@@ -1,0 +1,52 @@
+{% load static %}
+{% include "navbar/navbar.html" %}
+<link rel="stylesheet" type="text/css" href="{% static "meist.css" %}">
+
+<div class="main">
+	<div class="row sisu">
+		
+		<img class="bg" src="{{ lang.bg.url }}">
+
+		<div class="col map">
+			<div id="googleMap"></div>
+
+			<script>
+			function myMap() {
+			var mapProp= {
+			  center:new google.maps.LatLng({{ contact.gmaps_x }},{{ contact.gmaps_y }}),
+			  zoom:{{ contact.gmaps_zoom }},
+			  mapTypeId: google.maps.MapTypeId.HYBRID
+			};
+			var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+			}
+			var marker = new google.maps.Marker({position: myCenter});
+
+			marker.setMap(map);
+			</script>
+
+			<script src="https://maps.googleapis.com/maps/api/js?key={{ contact.gmaps_API }}&callback=myMap"></script>
+		</div>
+
+		<div class="col info">
+			<h1>{{ contact.name|upper }}</h1>
+			<h3><i class="bi-house-door"></i> {{ contact.address }}</h3>
+			<h3><i class="bi-mailbox"></i> {{ contact.email }}</h3>
+			<br>
+			{% for treener in treenerid %}
+				<div class="row treener">
+					<div class="col-1">
+						<img src="{{ treener.pilt.url }}">
+					</div>
+					<div class="col-11">
+						<h3>{{ treener.nimi|upper }}</h3>
+						<h4><i class="bi-mailbox"></i>{{ treener.email }} <i class="bi-telephone"></i>{{ treener.phone }}</h4>	
+					</div>
+					<br>
+				</div>
+			{% endfor %}
+		</div>
+
+	</div>
+</div>
+
+{% include "navbar/footer.html" %}

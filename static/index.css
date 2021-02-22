@@ -1,0 +1,96 @@
+/* MAIN */
+.main {
+	height: 100vh;
+}
+.main .buttons {
+	text-align: center;
+	padding-top: 40vh;
+	color: white;
+}
+.main .buttons h1 {
+	font-weight: 700;
+	font-size: 1.8em;
+}
+.main .buttons a {
+	text-decoration: none;
+	margin-left: 2em;
+	margin-right: 2em;
+	font-size: .75em;
+	padding: 1em 2em 1em 2em;
+	border: solid .15em white;
+	color: white;
+	border-radius: 100vw;
+	transform: all .5s;
+	transition: all .5s;
+	min-width: 15em;
+}
+.main .buttons a:hover {
+	border: solid .15em var(--kontrast);
+	color: var(--kontrast);
+	background-color: var(--kontrast-25);
+}
+.main .buttons .reverse {
+	background-color: var(--kontrast);
+	border: solid .15em var(--kontrast);
+}
+
+
+.sisu {
+	z-index: 1000;
+	width: 100vw;
+	height: auto;
+	background-color: white;
+	text-align: center;
+	padding-bottom: 2em;
+	margin-bottom: -2em;
+}
+.sisu h2 {
+	font-weight: 750;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	color: var(--kontrast);
+}
+.post-content {
+	height: 16em;
+	background-size: cover;
+	filter: saturate(25%);
+	transition: all .5s;
+	cursor: pointer;
+	border-radius: .5em .5em .5em .5em;
+}
+.post-content:hover {
+	filter: saturate(100%);
+}
+.post-content .date {
+	font-weight: 700;
+	color: white;
+	opacity: .5;
+	text-align: right;
+}
+.post-content h3 {
+	color: white;
+	font-weight: 600;
+	text-shadow: 2px 2px rgba(0,0,0,.5);
+	font-size: 1.35em;
+}
+.post a {
+	text-decoration: none;
+}
+
+.more-button {
+	border: solid .15em var(--kontrast);
+	color: var(--kontrast);
+	text-decoration: none !important;
+	margin: 3em;
+	font-size: .75em;
+	padding: 1em 2em 1em 2em;
+	border-radius: 100vw;
+	transform: all .5s;
+	transition: all .5s;
+	min-width: 15em;
+}
+.more-button:hover {
+	border: solid .15em var(--kontrast);
+	color: var(--kontrast);
+	background-color: var(--kontrast-25);
+}

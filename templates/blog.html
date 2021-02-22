@@ -1,0 +1,29 @@
+{% load static %}
+{% include "navbar/navbar.html" %}
+<link rel="stylesheet" type="text/css" href="{% static "hinnakiri.css" %}">
+
+<div class="main">
+	<div class="row sisu">
+
+
+		<img class="bg" src="{{ lang.bg.url }}">
+
+		<div class="container hinnakiri blog">
+			<h1>{{ lang.title|upper }}</h1>
+			<img src="{{ lang.pilt.url }}">
+			<p>{{ lang.text|linebreaks }}</p>
+			<br>
+			{% for post in posts %}
+			<a href="/blog/{{ post.id }}">
+			<div class="col-12 post" style="background-image: url({{ post.pilt.url }});">
+				<h4>{{ post.date }}</h4>
+				<h2>{{ post.tiitel|upper }}</h2>
+			</div>
+			</a>
+			{% endfor %}
+		</div>
+
+	</div>
+</div>
+
+{% include "navbar/footer.html" %}

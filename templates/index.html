@@ -1,0 +1,65 @@
+{% load static %}
+{% include "navbar/navbar.html" %}
+<link rel="stylesheet" type="text/css" href="{% static "index.css" %}">
+
+<div class="main">
+	<img class="bg" src="{{ lang.bg.url }}">
+	<div class="buttons">
+		<h1>{{ contact.name|upper }}</h1>
+		<br>
+		<a href="/hinnakiri">{{ lang.liitu_meiega }}</a>
+		<a href="/tutvustus" class="reverse">{{ lang.lurchist }}</a>
+		<a href="/meist">{{ lang.meist }}</a>
+	</div>
+</div>
+<div class="sisu">
+	<h2>UUDISED</h2>
+	<div class="row">
+		<div class="col-2"></div>
+		<div class="col-8">
+			<div class="row">
+				{% for post in news %}
+				<div class="col-4 post">
+					<a href="/blog/{{ post.id }}">
+					<div class="post-content" style="background-image: url({{ post.pilt.url }});">
+						<h4 class="date">{{ post.date }}</h4>
+						<h3>{{ post.tiitel|upper }}</h3>
+					</div>
+					</a>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="col-2"></div>
+	</div>
+	<br><br><br>
+	<a href="/blog" class="more-button">Rohkem uudiseid</a>
+	<br><br><br>
+
+
+	<link rel="stylesheet" type="text/css" href="{% static "pood.css" %}">
+	<h2>FANNIKAUP</h2>
+	<div class="row">
+		<div class="col-2"></div>
+		<div class="col-8">
+			<div class="row">
+				{% for toode in merch %}
+				<div class="col-4 toode">
+				<a href="toode/{{ toode.id }}">
+					<h3>{{ toode.nimi }}</h3>
+					<h4>{{ toode.hind }}€</h4>
+					<img src="{{ toode.pilt.url }}">
+				</a>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="col-2"></div>
+	</div>
+	<br><br><br>
+	<a href="/pood" class="more-button">Veel tooteid</a>
+	<br><br><br>
+</div>
+
+
+{% include "navbar/footer.html" %}

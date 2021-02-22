@@ -1,0 +1,28 @@
+{% load static %}
+{% include "navbar/navbar.html" %}
+<link rel="stylesheet" type="text/css" href="{% static "pood.css" %}">
+
+<div class="main">
+	<div class="row sisu">
+		
+		<img class="bg" src="{{ lang.bg.url }}">
+
+		<div class="container pood">
+			<h1>{{ lang.title|upper }}</h1>
+			<div class="row">
+				{% for toode in tooted %}
+				<div class="col-4 toode">
+				<a href="toode/{{ toode.id }}">
+					<h3>{{ toode.nimi }}</h3>
+					<h4>{{ toode.hind }}€</h4>
+					<img src="{{ toode.pilt.url }}">
+				</a>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+
+	</div>
+</div>
+
+{% include "navbar/footer.html" %}

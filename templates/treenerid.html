@@ -1,0 +1,32 @@
+{% load static %}
+{% include "navbar/navbar.html" %}
+<link rel="stylesheet" type="text/css" href="{% static "treenerid.css" %}">
+
+<div class="main">
+	<div class="row sisu">
+		
+		<img class="bg" src="{{ lang.bg.url }}">
+
+		<div class="container treenerid">
+			<h1>{{ lang.title|upper }}</h1>
+			<br><br>
+			{% for treener in treenerid %}
+				<div class="row">
+					<div class="col-1"></div>
+					<div class="col-3 pilt">
+						<img src="{{ treener.pilt.url }}">
+					</div>
+					<div class="col-7">
+						<h2>{{ treener.nimi|upper }}</h2>
+						<h5><i class="bi-mailbox"></i>{{ treener.email }} <i class="bi-telephone"></i>{{ treener.phone }}</h5>
+						<p>{{ treener.kirjeldus|linebreaks }}</p>
+					</div>
+					<div class="col-1"></div>
+				</div>
+			{% endfor %}
+		</div>
+
+	</div>
+</div>
+
+{% include "navbar/footer.html" %}

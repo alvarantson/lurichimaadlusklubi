@@ -1,0 +1,21 @@
+{% load static %}
+{% include "navbar/navbar.html" %}
+<link rel="stylesheet" type="text/css" href="{% static "hinnakiri.css" %}">
+
+<div class="main">
+	<div class="row sisu">
+
+
+		<img class="bg" src="{{ lang.bg.url }}">
+
+		<div class="container hinnakiri">
+			<h1>{{ lang.title|upper }}</h1>
+			<img src="{{ lang.pilt.url }}">
+			<p>{{ lang.text|linebreaks }}</p>
+			<br>
+		</div>
+
+	</div>
+</div>
+
+{% include "navbar/footer.html" %}

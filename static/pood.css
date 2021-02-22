@@ -1,0 +1,55 @@
+.pood {
+	margin-top: 15vh;
+	padding-bottom: 3vh;
+	background-color: white;
+	border-radius: 25px;
+	min-height: 75vh;
+}
+.pood h1 {
+	margin-top: 1.25em;
+	margin-bottom: 1em;
+	text-align: center;
+	opacity: .8;
+	font-weight: 700;
+	font-size: 1.8em;
+	color: var(--kontrast);
+}
+.toode {
+	background-color: white;
+	border-radius: 25px;
+	transition: all .5s;
+}
+.toode h3 {
+	color: var(--kontrast);
+	opacity: .8;
+	font-size: 1.25em;
+	font-weight: 350;
+	text-align: center;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.toode h4 {
+	color: white;
+	font-size: 1.5em;
+	font-weight: 700;
+	text-align: right;
+	position: absolute;
+	top: 1.5em;
+	right: 0;
+	z-index: 10000;
+	background-color: var(--kontrast);
+	padding: .25em .5em .25em .5em;
+	border-radius: 1000px 1000px 1000px 1000px;
+	opacity: .8;
+}
+.toode a {
+	color: black;
+	text-decoration: none;
+}
+.toode img {
+	width: 100%;
+	filter: saturate(50%);
+}
+.toode img:hover {
+	filter: saturate(100%);
+}
