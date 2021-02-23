@@ -17,6 +17,10 @@
 	font-weight: 700;
 	color: var(--kontrast);
 }
+.hinnakiri b {
+	color: var(--kontrast);
+	opacity: .8;
+}
 .hinnakiri p {
 	font-weight: 350;
 	font-size: .9em;
