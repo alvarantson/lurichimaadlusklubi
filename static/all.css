@@ -15,7 +15,77 @@ body{
 	width: 100vw;
 	background-color: black;
 }
+.hidden {
+	display: none;
+}
+/* LOADER */
+.loader {
+	background-color: black;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: 9999999999999999999;
+}
+.loader img{
+	height: 5vh;
+	margin-top: 40vh;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+/* NAVBAR PHONE */
+.navbar-phone__closer,
+.navbar-phone__burger {
+	color: white;
+	position: fixed;
+	right: 1em;
+	top: 1em;
+	z-index: 99999;
+	font-size: 2.5em;
+	text-shadow: 1px 1px black;
+}
+.navbar-phone__content {
+	min-width: 100vw;
+	min-height: 100vh;
+	position: fixed;
+	z-index: 99998;
+	background-color: black;
+}
+.navbar-phone__content .logo img{
+	height: 10vh;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5vh;
+}
+.navbar-phone__content .navigatsioon{
+	margin-top: 7.5vh;
+	text-align: center;
+}
+.navbar-phone__content .navigatsioon h5 a{
+	text-decoration: none;
+	color: white;
+}
+.navbar-phone__content .phone-footer-info {
+	text-align: center;
+	color: white;
+	font-weight: 250;
+}
+.navbar-phone__content .socials {
+	text-align: center;
+}
+.navbar-phone__content .socials a{
+	text-decoration: none;
+	color: white;
+	font-size: 2.5em;
+}
+.navbar-phone__content .toetajad img{
+	height: 2em;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 
+}
 /* NAVBAR */
 
 .navbar {

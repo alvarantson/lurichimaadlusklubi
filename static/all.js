@@ -1,11 +1,12 @@
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
 	$(".navbar-desktop").toggleClass("hidden");
 	$(".footer-desktop").toggleClass("hidden");
-	$("#myCarousel").toggleClass("hidden");
-	$(".carousel-bottom").toggleClass("hidden");
-	$(".sidenav-toggle").toggleClass("hidden");
+	$('.navbar-phone__closer').toggleClass('hidden');
 } else {
 	$(".navbar-phone").toggleClass("hidden");
+	$(".footer-phone").toggleClass("hidden");
+	$('.navbar-phone__closer').toggleClass('hidden');
+	$('.navbar-phone__burger').toggleClass('hidden');
 };
 
 

@@ -7,7 +7,7 @@
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- BOOTSTRAP 4 CDN -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -31,7 +31,9 @@
 <!-- social media icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="navbar">
+<div class="loader"><img src="{{ navbar_lang.logo.url }}"></div>
+
+<div class="navbar navbar-desktop">
 	<div class="col-3">
 		<a href="/" class="logo">
 			<img src="{{ navbar_lang.logo.url }}">
@@ -60,5 +62,43 @@
 </div>
 
 
+<i class="bi-list navbar-phone__burger"></i>
+<i class="bi-x navbar-phone__closer"></i>
 
+<div class="navbar-phone__content hidden">
+	<div class="col-12">
+		<a href="/" class="logo">
+			<img src="{{ navbar_lang.logo.url }}">
+		</a>
+	</div>
+	<div class="col-12 navigatsioon">
+		<h5><a href="/">{{ navbar_lang.index }}</a></h5>
+		<h5><a href="/hinnakiri">{{ navbar_lang.hinnakiri }}</a></h5>
+		<h5><a href="/meist">{{ navbar_lang.meist }}</a></h5>
+		<h5><a href="/pood">{{ navbar_lang.pood }}</a></h5>
+		<h5><a href="/treenerid">{{ navbar_lang.treenerid }}</a></h5>
+		<h5><a href="/tutvustus">{{ navbar_lang.tutvustus }}</a></h5>
+		<h5><a href="/blog">{{ navbar_lang.blog }}</a></h5>
+	</div>
 
+	<div class="col-12 phone-footer-info">
+		<br><br>
+		<p>{{ navbar_lang.footer_info|linebreaks }}</p>
+		<br><br>
+	</div>
+	<div class="col-12 socials">
+		{% for social in social_media %}
+		<a href="{{ social.url }}" target="_blank"><i class="bi-{{ social.icon }}"></i></a>
+		{% endfor %}
+	</div>
+	<div class="row toetajad">
+		<br>
+		{% for toetaja in toetajad %}
+		<div class="col-6">
+		<a href="{{ toetaja.url }}" target="_blank">
+			<img src="{{ toetaja.logo.url }}">
+		</a>
+		</div>
+		{% endfor %}
+	</div>
+</div>

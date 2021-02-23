@@ -5,6 +5,9 @@
 	border-radius: 25px;
 	min-height: 75vh;
 }
+.phone {
+	text-align: center;
+}
 a.back {
 	text-decoration: none;
 	color: white;

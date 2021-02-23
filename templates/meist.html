@@ -7,7 +7,7 @@
 		
 		<img class="bg" src="{{ lang.bg.url }}">
 
-		<div class="col map">
+		<div class="col-12 col-sm-6 map">
 			<div id="googleMap"></div>
 
 			<script>
@@ -27,17 +27,19 @@
 			<script src="https://maps.googleapis.com/maps/api/js?key={{ contact.gmaps_API }}&callback=myMap"></script>
 		</div>
 
-		<div class="col info">
+		<div class="col-12 col-sm-6 info">
 			<h1>{{ contact.name|upper }}</h1>
 			<h3><i class="bi-house-door"></i> {{ contact.address }}</h3>
 			<h3><i class="bi-mailbox"></i> {{ contact.email }}</h3>
 			<br>
 			{% for treener in treenerid %}
 				<div class="row treener">
-					<div class="col-1">
+					<div class="col-3 col-md-12"></div>
+					<div class="col-6 col-md-1">
 						<img src="{{ treener.pilt.url }}">
 					</div>
-					<div class="col-11">
+					<div class="col-3 col-md-12"></div>
+					<div class="col-12 col-md-11">
 						<h3>{{ treener.nimi|upper }}</h3>
 						<h4><i class="bi-mailbox"></i>{{ treener.email }} <i class="bi-telephone"></i>{{ treener.phone }}</h4>	
 					</div>
@@ -49,4 +51,5 @@
 	</div>
 </div>
 
+<script type="text/javascript" src="{% static 'meist.js' %}"></script>
 {% include "navbar/footer.html" %}
