@@ -44,6 +44,9 @@
 	padding-bottom: 2em;
 	margin-bottom: -2em;
 }
+.phone-body .sisu {
+	margin-bottom: 0em;
+}
 .sisu h2 {
 	font-weight: 750;
 	padding-top: 2em;

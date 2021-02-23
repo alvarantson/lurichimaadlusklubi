@@ -18,6 +18,9 @@ body{
 .hidden {
 	display: none;
 }
+.phone_body div {
+	overflow-y: hidden !important;
+}
 /* LOADER */
 .loader {
 	background-color: black;
@@ -39,7 +42,7 @@ body{
 	color: white;
 	position: fixed;
 	right: 1em;
-	top: 1em;
+	top: 0;
 	z-index: 99999;
 	font-size: 2.5em;
 	text-shadow: 1px 1px black;

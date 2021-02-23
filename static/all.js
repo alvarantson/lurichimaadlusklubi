@@ -7,6 +7,9 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
 	$(".footer-phone").toggleClass("hidden");
 	$('.navbar-phone__closer').toggleClass('hidden');
 	$('.navbar-phone__burger').toggleClass('hidden');
+	$('body').addClass('phone-body');
+	$('sisu').addClass('phone-body');
+	$('main').addClass('phone-body');
 };
 
 

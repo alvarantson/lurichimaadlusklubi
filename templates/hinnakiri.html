@@ -10,10 +10,10 @@
 
 		<div class="container hinnakiri">
 			<h1>{{ lang.title|upper }}</h1>
-			<p>{{ lang.text|linebreaks }}</p>
+			<p>{{ lang.text|safe|linebreaks }}</p>
 			<br>
 			<h3>{{ lang.title2|upper }}</h3>
-			<p>{{ lang.pricing|linebreaks }}</p>
+			<p>{{ lang.pricing|safe|linebreaks }}</p>
 		</div>
 
 	</div>
