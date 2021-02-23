@@ -15,6 +15,10 @@ body{
 	width: 100vw;
 	background-color: black;
 }
+b {
+	color: var(--kontrast);
+	opacity: .8;
+}
 .hidden {
 	display: none;
 }

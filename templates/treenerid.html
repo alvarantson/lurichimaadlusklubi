@@ -19,7 +19,7 @@
 					<div class="col-7">
 						<h2>{{ treener.nimi|upper }}</h2>
 						<h5><i class="bi-mailbox"></i>{{ treener.email }} <i class="bi-telephone"></i>{{ treener.phone }}</h5>
-						<p>{{ treener.kirjeldus|linebreaks }}</p>
+						<p>{{ treener.kirjeldus|safe|linebreaks }}</p>
 					</div>
 					<div class="col-1"></div>
 				</div>
