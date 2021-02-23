@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" href="{% static "index.css" %}">
 
 <div class="main">
-	<img class="bg" src="{{ lang.bg.url }}">
+	<img class="bg" src="{{ lang.bg.url }}" alt='{{ lang.bg }}'>
 	<div class="buttons">
 		<h1>{{ contact.name|upper }}</h1>
 		<br>
@@ -48,7 +48,7 @@
 				<a href="toode/{{ toode.id }}">
 					<h3>{{ toode.nimi }}</h3>
 					<h4>{{ toode.hind }}€</h4>
-					<img src="{{ toode.pilt.url }}">
+					<img src="{{ toode.pilt.url }}" alt='{{ toode.pilt }}'>
 				</a>
 				</div>
 				{% endfor %}

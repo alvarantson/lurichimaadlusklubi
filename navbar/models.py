@@ -18,6 +18,9 @@ class Contact(models.Model):
 	gmaps_API = models.CharField(max_length=64, unique=True)
 	open_hours = models.CharField(max_length=64, unique=True, blank=True)
 	footer_info = models.TextField(blank=True)
+	SEO_tags = models.TextField(blank=True)
+	SEO_description = models.TextField(blank=True)
+	SEO_author = models.CharField(max_length=999, blank=True)
 	def __str__(self):
 		return 'Dont create a new entry! Ara tee uut sissekannet!'
 
