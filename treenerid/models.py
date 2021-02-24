@@ -10,7 +10,7 @@ class Treenerid_lang(models.Model):
 		return self.lang.lang
 
 class Treener(models.Model):
-	lang = models.OneToOneField(Lang, on_delete=models.CASCADE)
+	lang = models.ForeignKey(Lang, on_delete=models.CASCADE)
 	nimi = models.CharField(max_length=999)
 	phone = models.CharField(max_length=999, blank=True)
 	email = models.CharField(max_length=999, blank=True)

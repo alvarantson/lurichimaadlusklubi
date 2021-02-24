@@ -22,7 +22,7 @@ class Toode_lang(models.Model):
 		return self.lang.lang
 
 class Toode(models.Model):
-	lang = models.OneToOneField(Lang, on_delete=models.CASCADE)
+	lang = models.ForeignKey(Lang, on_delete=models.CASCADE)
 	nimi = models.CharField(max_length=999, blank=True)
 	hind = models.FloatField(blank=True)
 	kirjeldus = models.TextField(blank=True)
